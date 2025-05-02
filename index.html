@@ -1,27 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <!-- DO NOT CHANGE CODE WITHIN THE HEAD ELEMENT -->
-  <!-- UNLESS YOU KNOW WHAT YOU"RE DOING-->
+    <!-- DO NOT CHANGE CODE WITHIN THE HEAD ELEMENT -->
+  <!-- UNLESS YOU KNOW WHAT YOU'RE DOING -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <!-- add fonts -->
+    <title>Aanuoluwa Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <!-- local style -->
+       <!-- local style -->
+ 
     <link rel="stylesheet" href="styles/global.css" />
+    <style>
+      body {
+        font-family: "JetBrains Mono", monospace;
+        padding: 1rem;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .bspacer {
+        margin-bottom: 2rem;
+      }
+      .hobbies-and-skill-child {
+        margin-top: 2rem;
+      }
+      .submission-result, #live-preview {
+        margin-top: 1rem;
+        border: 1px dashed gray;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header Area -->
-    <header></header>
+ 
+    <header>
+      <section id="header-view-1">
+        <div id="profile-image-container">
+          <div><p class="title">Aanuoluwa Portfolio</p></div>
+          <div>
+            <img
+              id="Aanuoluwa-image"
+              height="130"
+              width="130"
+              src="assets/images/image.jpg"
+              alt="Aanuoluwa profile picture"
+            />
+          </div>
+        </div>
+        <div id="bio-spans-container">
+          <span class="bio-spans">
+            email:
+            <a
+              href="mailto:idowuaanu1@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >idowuaanu1@gmail.com</a
+            >
+          </span>
+          <span class="bio-spans">phone: +234-8108019186</span>
+          <span class="bio-spans">
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/aanuoluwa-idowu"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://www.linkedin.com/in/aanuoluwa-idowu</a
+            >
+          </span>
+        </div>
+      </section>
+      <section id="header-view-2">
+        <p>
+          <span class="title">Summary</span><br />
+          Aanuoluwa is a Mass Communicator and a Software Developer<br />
+          bringing over 6 years of professional experience in being a typical<br />
+          professional has a proven track record of working in and ultimately
+          thriving<br />
+          startup environments.
+        </p>
+      </section>
+    </header>
+
     <!-- Main Area -->
+  
     <main>
-      <h1>My Amazing Portfolio</h1>
+      <section class="bspacer" id="education-section">
+        <p class="title">Education</p>
+        <hr />
+        <span class="education-content-span">
+          <p>
+            B.Sc in Mass Communication | 10/2016 - 5/2021<br />
+            <a href="#">Ahmadu Bello University</a> - Nigeria
+          </p>
+        </span>
+        <ul>
+          <li>Graduated with an upper grade</li>
+          <li>Did well overall</li>
+        </ul>
+      </section>
+
+      <section class="bspacer" id="experience-section">
+        <p class="title">Experience</p>
+        <hr />
+        <div>
+          <span class="education-content-span">
+            <p>
+              <a href="#">Virtual Accounting Partner</a> - Remote |
+              Panic Expert | 8/2023 - 8/2023
+            </p>
+          </span>
+          <ul>
+            <li>Helped clients stay calm while facing perpetual doom</li>
+          </ul>
+        </div>
+        <div>
+          <span class="education-content-span">
+            <p>
+              <a href="#">Television Journalism</a> - Nigeria | Journalism |
+              9/2024 - 10/2024
+            </p>
+          </span>
+          <ul>
+            <li>Stayed calm in the midst of storm</li>
+            <li>Your best bet, always</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="hobbies-and-skills-container">
+        <div class="hobbies-and-skill-child">
+          <p class="title">Hobbies</p>
+          <hr />
+          <ul>
+            <li>Singing</li>
+            <li>Dancing</li>
+            <li>Shopping</li>
+            <li>Reading and writing basically</li>
+          </ul>
+        </div>
+
+        <div class="hobbies-and-skill-child">
+          <p class="title">Skills</p>
+          <hr />
+          <ul>
+            <li>Communicating</li>
+            <li>Having a beauty sleep</li>
+            <li>Looking good</li>
+            <li>Getting things done</li>
+          </ul>
+
+  <!-- New form container -->
+          <form id="contact-form">
+            <label for="fname">First name:</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              onchange="handleChange('fname')"
+            /><br />
+
+            <label for="lname">Last name:</label><br />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              onchange="handleChange('lname')"
+            /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onchange="handleChange('email')"
+            /><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Type your message here..."
+              rows="5"
+              cols="30"
+              onchange="handleChange('message')"
+            ></textarea><br /><br />
+
+            <input type="submit" value="Submit" />
+          </form>
+
+           <!-- Output result here -->
+          <div id="live-preview">
+            <p><strong>Live Preview:</strong></p>
+            <p>First name: <span id="preview-fname"></span></p>
+            <p>Last name: <span id="preview-lname"></span></p>
+            <p>Email: <span id="preview-email"></span></p>
+            <p>Message: <span id="preview-message"></span></p>
+          </div>
+
+          
+          <div id="form-result" class="submission-result"></div>
+        </div>
+      </section>
     </main>
+
+    <script>
+  
+      function handleChange(fieldId) {
+        const value = document.getElementById(fieldId).value;
+        document.getElementById("preview-" + fieldId).innerText = value;
+      }
+
+
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const resultDiv = document.getElementById("form-result");
+        resultDiv.innerHTML = `
+          <h3>Form Submission Result:</h3>
+          <p><strong>Name:</strong> ${fname} ${lname}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `;
+      });
+    </script>
   </body>
 </html>
